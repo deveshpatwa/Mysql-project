@@ -352,3 +352,30 @@ having gs="Python,SQL"
 )
 select id from temp;
 
+select * from store;
+where category = 'furniture';
+
+
+create database db2;
+
+use db2;
+
+create table emp(
+	id int primary key auto_increment,
+    name varchar(30),
+    salary double
+);
+
+select * from emp;
+
+describe emp;
+
+alter table emp
+add column name2 varchar(5);
+
+select * from emp;
+
+
+insert into emp(name,salary)
+values ("ravi",50000);
+
