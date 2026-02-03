@@ -8,7 +8,18 @@ group by agegroup
 order by attrition desc;
 
 
-2.	Identify the average monthly income by gender and department, and highlight income gaps.
-3.	Find the most common education field among employees who left the company.
-4.	Determine which marital status group has the highest attrition count.
-5.	Rank departments by average total working years of employees.
+-- 2.	Identify the average monthly income by gender and department, and highlight income gaps.
+-- python
+
+
+-- 3.	Find the most common education field among employees who left the company.
+select educationfield , count(*) as number_of_emp
+from hr 
+where Attrition = "yes"
+group by educationfield
+order by number_of_emp desc;
+
+
+
+-- 4.	Determine which marital status group has the highest attrition count.
+-- 5.	Rank departments by average total working years of employees.
